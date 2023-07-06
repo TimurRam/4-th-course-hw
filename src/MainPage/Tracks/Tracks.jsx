@@ -1,6 +1,6 @@
 import classes from './Tracks.module.css';
-import Tracks__SearchFilter from '../Tracks__SearchFilter/Tracks__SearchFilter';
-import Tracks__List from '../Tracks__List/Tracks__List';
+import Tracks__SearchFilter from './Tracks__SearchFilter/Tracks__SearchFilter';
+import Tracks__List from './Tracks__List/Tracks__List';
 
 const Tracks = ({ heading = 'Треки' }) => {
   return (

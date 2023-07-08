@@ -1,34 +1,34 @@
-import classes from './MusicPlayer__Controls.module.css';
+import * as styled from './MusicPlayer__ControlsStyled';
 import sprite from 'img/icon/sprite.svg';
 const MusicPlayer__Controls = () => {
   return (
-    <div className={classes.playerControls}>
-      <div className={classes.previos}>
-        <svg className={classes.previosSvg} alt="prev">
+    <styled.playerControls>
+      <styled.previos>
+        <styled.previosSvg alt="prev">
           <use xlinkHref={`${sprite}#icon-prev`}></use>
-        </svg>
-      </div>
-      <div className={classes.play}>
-        <svg className={classes.playSvg} alt="play">
+        </styled.previosSvg>
+      </styled.previos>
+      <styled.play>
+        <styled.playSvg alt="play">
           <use xlinkHref={`${sprite}#icon-play`}></use>
-        </svg>
-      </div>
-      <div className={classes.next}>
-        <svg className={classes.nextSvg} alt="next">
+        </styled.playSvg>
+      </styled.play>
+      <styled.next>
+        <styled.nextSvg alt="next">
           <use xlinkHref={`${sprite}#icon-next`}></use>
-        </svg>
-      </div>
-      <div className={classes.repeat}>
-        <svg className={classes.repeatSvg} alt="repeat">
+        </styled.nextSvg>
+      </styled.next>
+      <styled.repeat>
+        <styled.repeatSvg alt="repeat">
           <use xlinkHref={`${sprite}#icon-repeat`}></use>
-        </svg>
-      </div>
-      <div className={classes.shuffle}>
-        <svg className={classes.shuffleSvg} alt="shuffle">
+        </styled.repeatSvg>
+      </styled.repeat>
+      <styled.shuffle>
+        <styled.shuffleSvg alt="shuffle">
           <use xlinkHref={`${sprite}#icon-shuffle`}></use>
-        </svg>
-      </div>
-    </div>
+        </styled.shuffleSvg>
+      </styled.shuffle>
+    </styled.playerControls>
   );
 };
 

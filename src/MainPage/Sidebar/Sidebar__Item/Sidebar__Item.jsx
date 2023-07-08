@@ -1,13 +1,12 @@
-import classes from './Sidebar__Item.module.css';
+import * as styled from './Sidebar__ItemStyled';
 
-const Sidebar__Item = ({ img, description, loadingClass }) => {
+export const Sidebar__Item = ({ img, description, loadingClass }) => {
   return (
-    <div className={classes.sidebar__item + ` ${loadingClass}`}>
-      <a className="sidebar__link" href="#">
-        <img className="sidebar__img" src={img} alt={description} />
+    <styled.sidebar__item className={loadingClass}>
+      <a href="#">
+        <img src={img} alt={description} />
       </a>
-    </div>
+    </styled.sidebar__item>
   );
 };
-
 export default Sidebar__Item;

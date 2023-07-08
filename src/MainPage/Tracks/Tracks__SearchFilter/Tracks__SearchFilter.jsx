@@ -1,4 +1,4 @@
-import classes from './Tracks__SearchFilter.module.css';
+import * as styled from './Tracks__SearchFilterStyled';
 import Tracks__FilterBtn from '../Tracks__FilterBtn/Tracks__FilterBtn';
 import { useState } from 'react';
 
@@ -8,8 +8,8 @@ const Tracks__SearchFilter = () => {
     setActiveButton(id);
   };
   return (
-    <div className={classes.searchFilter}>
-      <h2 className={classes.heading}>Искать по:</h2>
+    <styled.searchFilter>
+      <styled.heading>Искать по:</styled.heading>
       <Tracks__FilterBtn
         makeBtnActive={makeBtnActive}
         id="1"
@@ -28,7 +28,7 @@ const Tracks__SearchFilter = () => {
         isActive={activeButton === '3' && true}
         title="жанру"
       />
-    </div>
+    </styled.searchFilter>
   );
 };
 

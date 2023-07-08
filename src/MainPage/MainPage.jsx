@@ -1,4 +1,4 @@
-import classes from './MainPage.module.css';
+import * as styled from './MainPageStyled';
 import Header from './Header/Header';
 import MainNav from './MainNav/MainNav';
 import Tracks from './Tracks/Tracks';
@@ -7,13 +7,13 @@ import MusicPlayer from './MusicPlayer/MusicPlayer';
 
 const MainPage = () => {
   return (
-    <div className={classes.wrapper}>
+    <styled.wrapper>
       <Header />
       <MainNav />
       <Tracks />
       <Sidebar />
       <MusicPlayer />
-    </div>
+    </styled.wrapper>
   );
 };
 

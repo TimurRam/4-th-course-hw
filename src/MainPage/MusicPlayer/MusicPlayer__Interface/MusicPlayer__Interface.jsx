@@ -1,4 +1,4 @@
-import classes from './MusicPlayer__Interface.module.css';
+import * as styled from './MusicPlayer__InterfaceStyled';
 import MusicPlayer__Controls from '../MusicPlayer__Controls/MusicPlayer__Controls';
 import MusicPlayer__Track from '../MusicPlayer__Track/MusicPlayer__Track';
 import MusicPlayer__LikeDislike from '../MusicPlayer__LikeDislike/MusicPlayer__LikeDislike';
@@ -6,14 +6,14 @@ import MusicPlayer__Volume from '../MusicPlayer__Volume/MusicPlayer__Volume';
 
 const MusicPlayer__Interface = () => {
   return (
-    <div className={classes.playerInterface}>
-      <div className={classes.leftBlock}>
+    <styled.playerInterface>
+      <styled.leftBlock>
         <MusicPlayer__Controls />
         <MusicPlayer__Track />
         <MusicPlayer__LikeDislike />
-      </div>
+      </styled.leftBlock>
       <MusicPlayer__Volume />
-    </div>
+    </styled.playerInterface>
   );
 };
 

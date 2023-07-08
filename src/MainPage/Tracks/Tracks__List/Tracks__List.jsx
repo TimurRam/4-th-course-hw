@@ -1,4 +1,4 @@
-import classes from './Tracks__List.module.css';
+import * as styled from './Tracks__ListStyled';
 import Tracks__ListHead from '../Tracks__ListHead/Tracks__ListHead';
 import Tracks__Track from '../Tracks__Track/Tracks__Track';
 import { fakeState } from 'helpers/fakeState';
@@ -24,10 +24,10 @@ const Tracks__List = () => {
   ));
 
   return (
-    <div className={classes.trackList}>
+    <styled.trackList>
       <Tracks__ListHead />
       {trackElements}
-    </div>
+    </styled.trackList>
   );
 };
 

@@ -1,4 +1,5 @@
-.modalWrapper {
+import { styled } from 'styled-components';
+export const modalWrapper = styled.div`
   position: absolute;
   box-sizing: border-box;
   margin-top: 10px;
@@ -8,8 +9,8 @@
   background-color: #313131;
   overflow: hidden;
   border-radius: 12px;
-}
-.modalList {
+`;
+export const modalList = styled.ul`
   box-sizing: border-box;
   height: 241px;
   list-style: none;
@@ -18,34 +19,35 @@
   overflow-y: scroll;
   scrollbar-color: white, gray;
 }
-.modalList li {
+& li {
   padding: 12px 0;
 }
-.modalList a {
+& a {
   text-decoration: none;
   color: #fff;
   font-size: 20px;
   line-height: 24px;
 }
 
-.modalList a:hover {
+& a:hover {
   text-decoration: underline;
   color: #b672ff;
 }
-.modalList::-webkit-scrollbar {
+&::-webkit-scrollbar {
   background-color: #313131;
   width: 4px;
   border-radius: 4px;
 }
 
-.modalList::-webkit-scrollbar-thumb {
+&::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: #ffffff;
 }
 
-.modalList::-webkit-scrollbar-track {
+&::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: #4b4949;
 }
+`;

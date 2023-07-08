@@ -1,5 +1,5 @@
 import classes from './Sidebar.module.css';
-import Sidebar__Item from '../Sidebar__Item/Sidebar__Item';
+import Sidebar__Item from './Sidebar__Item/Sidebar__Item';
 import playlist01 from 'img/playlist01.png';
 import playlist02 from 'img/playlist02.png';
 import playlist03 from 'img/playlist03.png';

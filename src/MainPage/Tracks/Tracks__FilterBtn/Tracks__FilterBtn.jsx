@@ -1,25 +1,21 @@
-import classes from './Tracks__FilterBtn.module.css';
-import Tracks__FilterModal from 'MainPage/Tracks__FilterModal/Tracks__FilterModal';
+import * as Styled from './Tracks__FilterBtn_styles';
+import Tracks__FilterModal from 'MainPage/Tracks/Tracks__FilterModal/Tracks__FilterModal';
 import { fakeState } from 'helpers/fakeState';
 import { getSortList } from 'helpers/helpers';
 
-const Tracks__FilterBtn = ({ id, isActive, title, makeBtnActive }) => {
+export const Tracks__FilterBtn = ({ id, isActive, title, makeBtnActive }) => {
   const handleOnClick = () => {
     isActive ? makeBtnActive(0) : makeBtnActive(id);
-    console.log(isActive);
   };
   //Функция getSortList по тайтлу сопостовляет по какому свойству сформировать
   //массив из стейта, а затем возвращает массив полученных значений
   const sortList = getSortList(title, fakeState);
   return (
     <div>
-      <div
-        onClick={handleOnClick}
-        className={`${classes.filterBtn} ${isActive && classes.active}`}
-      >
+      <Styled.FilterBtn onClick={handleOnClick} $isActive={isActive}>
         {title}
-        {isActive && <div className={classes.shortcut}>{sortList.length}</div>}
-      </div>
+        {isActive && <Styled.Shortcut>{sortList.length}</Styled.Shortcut>}
+      </Styled.FilterBtn>
       {isActive && <Tracks__FilterModal sortList={sortList} />}
     </div>
   );

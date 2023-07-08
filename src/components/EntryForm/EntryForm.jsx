@@ -5,6 +5,7 @@ import EntryBtn from './EntryBtn/EntryBtn';
 
 const EntryForm = () => {
   return (
+    <div className={classes.center}>
     <form className={classes.form}>
       <img className={classes.logo} src={logo_black} alt="logo" />
       <ul className={classes.inputsList}>
@@ -20,6 +21,7 @@ const EntryForm = () => {
         <EntryBtn value="Зарегистрироваться" colored={false} />
       </div>
     </form>
+    </div>
   );
 };
 

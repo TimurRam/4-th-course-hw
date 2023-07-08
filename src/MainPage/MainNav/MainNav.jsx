@@ -1,5 +1,5 @@
 import classes from './MainNav.module.css';
-import MainNav__Link from '../MainNav__Link/MainNav__Link';
+import MainNav__Link from './MainNav__Link/MainNav__Link';
 import sprite from 'img/icon/sprite.svg';
 import { useState } from 'react';
 

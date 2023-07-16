@@ -1,4 +1,4 @@
-import MainPage from 'MainPage/MainPage';
+import MainPage from './Pages/MainPage/MainPage';
 import EntryForm from './Pages/EntryForm/EntryForm';
 import { Routes, Route } from 'react-router-dom';
 import RegistrationForm from 'Pages/RegistrationForm/RegistrationForm';

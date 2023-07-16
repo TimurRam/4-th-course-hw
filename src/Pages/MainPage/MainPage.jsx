@@ -5,10 +5,10 @@ import Tracks from './Tracks/Tracks';
 import Sidebar from './Sidebar/Sidebar';
 import MusicPlayer from './MusicPlayer/MusicPlayer';
 import { Route, Routes } from 'react-router-dom';
-import Playlist from './Tracks/Playlist';
+import Playlist from '../Playlist/Playlist';
 import { fakeState } from 'helpers/fakeState';
-import NotFound from './Tracks/NotFound';
-import Favorites from './Tracks/Favorites';
+import { NotFound } from '../NotFoundPage/NotFound';
+import Favorites from '../Favorites/Favorites';
 
 const MainPage = () => {
   return (
@@ -19,7 +19,7 @@ const MainPage = () => {
         <Route path="/" element={<Tracks tracksData={fakeState} />} />
         <Route path="/playlist/:id" element={<Playlist />} />
         <Route path="/*" element={<NotFound />} />
-        <Route path='/favorites' element={<Favorites />} />
+        <Route path="/favorites" element={<Favorites />} />
 
         {/* <Tracks/> */}
       </Routes>

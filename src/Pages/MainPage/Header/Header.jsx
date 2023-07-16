@@ -1,5 +1,5 @@
 import * as styled from './HeaderStyled';
-import logo from '../../img/logo.png';
+import logo from '../../../img/logo.png';
 import Header__Search from './HeaderSearch/HeaderSearch';
 import Header__Sidebar from './HeaderSidebar/HeaderSidebar';
 

@@ -1,7 +1,8 @@
-import * as Styled from './TracksFilterBtnstyles';
-import Tracks__FilterModal from 'MainPage/Tracks/TracksFilterModal/TracksFilterModal';
+import * as Styled from './TracksFilterBtnStyled';
+
 import { fakeState } from 'helpers/fakeState';
 import { getSortList } from 'helpers/helpers';
+import TracksFilterModal from '../TracksFilterModal/TracksFilterModal';
 
 export const TracksFilterBtn = ({ id, isActive, title, makeBtnActive }) => {
   const handleOnClick = () => {
@@ -16,7 +17,7 @@ export const TracksFilterBtn = ({ id, isActive, title, makeBtnActive }) => {
         {title}
         {isActive && <Styled.Shortcut>{sortList.length}</Styled.Shortcut>}
       </Styled.FilterBtn>
-      {isActive && <Tracks__FilterModal sortList={sortList} />}
+      {isActive && <TracksFilterModal sortList={sortList} />}
     </div>
   );
 };

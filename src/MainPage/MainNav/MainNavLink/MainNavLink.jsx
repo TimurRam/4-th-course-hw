@@ -1,10 +1,10 @@
 import * as styled from './MainNavLinkStyled';
 import { Link } from 'react-router-dom';
 
-const MainNavLink = ({ linkName, link }) => {
+const MainNavLink = ({ linkName, link, logout }) => {
   return (
     <styled.navLink>
-      <Link to={link} className="menu__link">
+      <Link onClick={logout} to={link} className="menu__link">
         {linkName}
       </Link>
     </styled.navLink>

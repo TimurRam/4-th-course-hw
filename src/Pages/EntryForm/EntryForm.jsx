@@ -18,8 +18,8 @@ const EntryForm = () => {
           </li>
         </styled.inputsList>
         <styled.btnContainer>
-          <EntryBtn value="Войти" colored={true} />
-          <EntryBtn value="Зарегистрироваться" colored={false} />
+          <EntryBtn value="Войти" colored={true} link='/' />
+          <EntryBtn value="Зарегистрироваться" colored={false} link='/registration' />
         </styled.btnContainer>
       </styled.form>
     </styled.center>

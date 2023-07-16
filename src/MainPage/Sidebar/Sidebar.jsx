@@ -15,14 +15,14 @@ const Sidebar = () => {
 
   return (
     <styled.sideBar>
-      <Link to="/playlist/1">
+      <Link to="/playlist/0">
         <Sidebar__Item
           img={playlist01}
           description="day's playlist"
           loadingClass={loadingClass}
         />
       </Link>
-      <Link to="/playlist/2">
+      <Link to="/playlist/1">
         <Sidebar__Item
           img={playlist02}
           description="
@@ -30,7 +30,7 @@ const Sidebar = () => {
           loadingClass={loadingClass}
         />
       </Link>
-      <Link to="/playlist/3">
+      <Link to="/playlist/2">
         <Sidebar__Item
           img={playlist03}
           description="indie charge"

@@ -1,27 +1,27 @@
-import classes from './EntryForm.module.css';
+import * as styled from './EntryFormStyled';
 import logo_black from './logo_black.svg';
-import EntryInput from './EntryInput/EntryInput';
 import EntryBtn from './EntryBtn/EntryBtn';
+import EntryInput from './EntryInput/EntryInput';
 
 const EntryForm = () => {
   return (
-    <div className={classes.center}>
-    <form className={classes.form}>
-      <img className={classes.logo} src={logo_black} alt="logo" />
-      <ul className={classes.inputsList}>
-        <li>
-          <EntryInput placeholder="Логин" />
-        </li>
-        <li>
-          <EntryInput placeholder="Пароль" />
-        </li>
-      </ul>
-      <div className={classes.btnContainer}>
-        <EntryBtn value="Войти" colored={true} />
-        <EntryBtn value="Зарегистрироваться" colored={false} />
-      </div>
-    </form>
-    </div>
+    <styled.center>
+      <styled.form>
+        <styled.logo src={logo_black} alt="logo" />
+        <styled.inputsList>
+          <li>
+            <EntryInput placeholder="Логин" />
+          </li>
+          <li>
+            <EntryInput placeholder="Пароль" />
+          </li>
+        </styled.inputsList>
+        <styled.btnContainer>
+          <EntryBtn value="Войти" colored={true} />
+          <EntryBtn value="Зарегистрироваться" colored={false} />
+        </styled.btnContainer>
+      </styled.form>
+    </styled.center>
   );
 };
 

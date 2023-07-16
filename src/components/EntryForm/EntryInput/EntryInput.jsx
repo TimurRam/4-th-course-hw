@@ -1,8 +1,8 @@
-import classes from './EntryInput.module.css';
+import * as styled from './EntryInputStyled'
 
 const EntryInput = ({ placeholder }) => {
   return (
-    <input className={classes.input} type="text" placeholder={placeholder} />
+    <styled.input type="text" placeholder={placeholder} />
   );
 };
 

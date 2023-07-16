@@ -1,4 +1,4 @@
-import classes from './Sidebar.module.css';
+import * as styled from './SidebarStyled';
 import Sidebar__Item from './Sidebar__Item/Sidebar__Item';
 import playlist01 from 'img/playlist01.png';
 import playlist02 from 'img/playlist02.png';
@@ -13,7 +13,7 @@ const Sidebar = () => {
   });
 
   return (
-    <div className={classes.sideBar}>
+    <styled.sideBar>
       <Sidebar__Item
         img={playlist01}
         description="day's playlist"
@@ -30,7 +30,7 @@ const Sidebar = () => {
         description="indie charge"
         loadingClass={loadingClass}
       />
-    </div>
+    </styled.sideBar>
   );
 };
 

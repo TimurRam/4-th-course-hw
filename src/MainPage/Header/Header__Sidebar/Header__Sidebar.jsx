@@ -1,14 +1,14 @@
-import classes from './Header__Sidebar.module.css';
-import sprite from 'img/icon/sprite.svg'
+import sprite from 'img/icon/sprite.svg';
+import * as styled from './Header__SidebarStyled';
 
 const Header__Sidebar = () => {
   return (
-    <div className={classes.sidebarPersonal__container}>
+    <styled.sidebarPersonalContainer>
       <p>Name</p>
-      <svg className={classes.logout}>
-          <use xlinkHref={`${sprite}#icon-logout`} />
-        </svg>
-    </div>
+      <styled.logout>
+        <use xlinkHref={`${sprite}#icon-logout`} />
+      </styled.logout>
+    </styled.sidebarPersonalContainer>
   );
 };
 

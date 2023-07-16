@@ -1,4 +1,4 @@
-import classes from './MainNav.module.css';
+import * as styled from './MainNavStyled'
 import MainNav__Link from './MainNav__Link/MainNav__Link';
 import sprite from 'img/icon/sprite.svg';
 import { useState } from 'react';
@@ -7,18 +7,18 @@ const MainNav = () => {
   const [isVisible, setIsVisible] = useState(false);
   const handleClickBurger = () => setIsVisible(!isVisible);
   return (
-    <nav className={classes.mainNav}>
-      <svg onClick={handleClickBurger} className={classes.burgerSvg}>
+    <styled.mainNav>
+      <styled.burgerSvg onClick={handleClickBurger}>
         <use xlinkHref={`${sprite}#icon-burger`} />
-      </svg>
-      <div className={classes.navListContainer}>
-        <ul className={`${classes.navList} ${isVisible && classes.active}`}>
+      </styled.burgerSvg>
+      <styled.navListContainer>
+        <styled.navList $isVisible = {isVisible}>
           <MainNav__Link linkName={'Главное'} />
           <MainNav__Link linkName={'Мой плейлист'} />
           <MainNav__Link linkName={'Выйти'} />
-        </ul>
-      </div>
-    </nav>
+        </styled.navList>
+      </styled.navListContainer>
+    </styled.mainNav>
   );
 };
 

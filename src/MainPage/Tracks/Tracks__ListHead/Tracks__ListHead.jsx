@@ -1,18 +1,18 @@
-import classes from './Tracks__ListHead.module.css';
+import * as styled from './Tracks__ListHeadStyled';
 import sprite from 'img/icon/sprite.svg';
 const Tracks__ListHead = ({ heading = 'Треки' }) => {
   return (
-    <div className={classes.listHead}>
+    <styled.listHead>
       <div>Трек</div>
       <div>Исполнитель</div>
       <div>Альбом</div>
       <div></div>
-      <div className={classes.timeCol}>
-        <svg className={classes.watchSvg}>
+      <styled.timeCol>
+        <styled.watchSvg>
           <use xlinkHref={`${sprite}#icon-watch`} />
-        </svg>
-      </div>
-    </div>
+        </styled.watchSvg>
+      </styled.timeCol>
+    </styled.listHead>
   );
 };
 

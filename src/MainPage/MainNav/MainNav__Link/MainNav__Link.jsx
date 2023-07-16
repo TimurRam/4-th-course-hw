@@ -1,13 +1,13 @@
-import classes from './MainNav__Link.module.css';
+import * as styled from './MainNavLinkStyled';
 
-const MainNav__Link = ({ linkName }) => {
+const MainNavLink = ({ linkName }) => {
   return (
-    <li className={classes.navLink}>
+    <styled.navLink>
       <a href="http://" className="menu__link">
         {linkName}
       </a>
-    </li>
+    </styled.navLink>
   );
 };
 
-export default MainNav__Link;
+export default MainNavLink;

@@ -1,5 +1,5 @@
 import * as styled from './MainNavStyled'
-import MainNav__Link from './MainNav__Link/MainNav__Link';
+import MainNav__Link from './MainNavLink/MainNavLink';
 import sprite from 'img/icon/sprite.svg';
 import { useState } from 'react';
 
@@ -13,9 +13,9 @@ const MainNav = () => {
       </styled.burgerSvg>
       <styled.navListContainer>
         <styled.navList $isVisible = {isVisible}>
-          <MainNav__Link linkName={'Главное'} />
-          <MainNav__Link linkName={'Мой плейлист'} />
-          <MainNav__Link linkName={'Выйти'} />
+          <MainNav__Link linkName={'Главное'} link='/' />
+          <MainNav__Link linkName={'Мой плейлист'} link='/favorites' />
+          <MainNav__Link linkName={'Выйти'} link='/authorization' />
         </styled.navList>
       </styled.navListContainer>
     </styled.mainNav>

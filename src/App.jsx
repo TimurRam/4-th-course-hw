@@ -1,11 +1,11 @@
+import { AppRoutes } from 'Routes';
 import './App.css';
-import EntryForm from './components/EntryForm/EntryForm';
-import MainPage from './MainPage/MainPage';
+
 
 function App() {
   return (
-    // <EntryForm />
-    <MainPage />
+    <AppRoutes/>
+  
   );
 }
 

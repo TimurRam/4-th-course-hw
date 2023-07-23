@@ -1,7 +1,6 @@
 import * as styled from './TracksListStyled';
 import Tracks__ListHead from '../TracksListHead/TracksListHead';
 import Tracks__Track from '../TracksTrack/TracksTrack';
-import { fakeState } from 'helpers/fakeState';
 import { useEffect, useState } from 'react';
 
 const TracksList = ({tracksData}) => {
@@ -10,9 +9,11 @@ const TracksList = ({tracksData}) => {
   useEffect(() => {
     setTimeout(setLoadingClass, 3000, '');
   });
-
+const HandleOnClick = () => {
+console.log('1');
+}
   const trackElements = tracksData.map((track) => (
-    <Tracks__Track
+    <Tracks__Track 
       key={track.id}
       logo={track.logo}
       name={track.name}

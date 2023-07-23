@@ -1,6 +1,7 @@
 import * as styled from './TracksTrackStyled';
 import sprite from 'img/icon/sprite.svg';
 import { formatTime } from 'helpers/helpers';
+import { useState } from 'react';
 
 const TracksTrack = ({
   logo,
@@ -10,6 +11,10 @@ const TracksTrack = ({
   duration,
   loadingClass,
 }) => {
+  const [currentTrack, setCurrentTrack] = useState(null)
+  const HandleOnClick = () => {
+console.log({name});
+  }
   return (
     <styled.track>
       <styled.trackLogo className={loadingClass}>
@@ -19,7 +24,7 @@ const TracksTrack = ({
           </styled.trackLogoSvg>
         )}
       </styled.trackLogo>
-      <styled.trackName className={loadingClass}>{name}</styled.trackName>
+      <styled.trackName onClick ={HandleOnClick} className={loadingClass}>{name}</styled.trackName>
       <div className={loadingClass}>{author}</div>
       <div className={loadingClass}>{album}</div>
       <div className={loadingClass}>

@@ -12,6 +12,7 @@ const TracksTrack = ({
     setCurrentTrack(track);
     setInvisible('true');
   };
+
   return (
     <styled.track>
       <styled.trackLogo className={loadingClass}>

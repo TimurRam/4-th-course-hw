@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
-
+export const player = styled.audio`
+`
 export const playerTrack = styled.div`
   box-sizing: border-box;
   padding: 0 33px;

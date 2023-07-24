@@ -5,6 +5,10 @@ const MusicPlayerTrack = ({ currentTrack }) => {
   console.log(currentTrack);
   return (
     <styled.playerTrack>
+      
+      <audio className='player' controls src={currentTrack.track_file}/>
+   
+
       <styled.trackLogo>
         <styled.trackLogoSvg>
           <use xlinkHref={`${sprite}#icon-note`}></use>

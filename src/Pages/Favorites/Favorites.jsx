@@ -1,5 +1,4 @@
 import * as styled from '../MainPage/Tracks/TracksStyled';
-import Tracks__SearchFilter from '../MainPage/Tracks/TracksSearchFilter/TracksSearchFilter';
 import Tracks__List from '../MainPage/Tracks/TracksList/TracksList';
 import { fakeStateList } from 'helpers/fakeStateList';
 

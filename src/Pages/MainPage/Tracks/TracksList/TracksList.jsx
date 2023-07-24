@@ -3,18 +3,16 @@ import Tracks__ListHead from '../TracksListHead/TracksListHead';
 import Tracks__Track from '../TracksTrack/TracksTrack';
 import { useEffect, useState } from 'react';
 
-
-const TracksList = ({ tracksData, setCurrentTrack, setInvisible,loadingClass }) => {
-  // Вешает класс loading на три секунды, а затем убирает его
-  // const [loadingClass, setLoadingClass] = useState('loading');
-  // console.log(loadingClass);
-  // useEffect(() => {
-  //   setTimeout(setLoadingClass, 3000, '');
-  // });
-
+const TracksList = ({
+  getError,
+  tracksData,
+  setCurrentTrack,
+  setInvisible,
+  loadingClass,
+}) => {
   const trackElements = tracksData.map((track) => (
     <Tracks__Track
-    
+    getError={getError}
       track={track}
       setInvisible={setInvisible}
       setCurrentTrack={setCurrentTrack}
@@ -22,7 +20,11 @@ const TracksList = ({ tracksData, setCurrentTrack, setInvisible,loadingClass }) 
       loadingClass={loadingClass}
     />
   ));
-
+if(getError){
+  return(
+    <h1>{getError}</h1>
+  )
+}
   return (
     <styled.trackList>
       <Tracks__ListHead />

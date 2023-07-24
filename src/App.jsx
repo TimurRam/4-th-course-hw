@@ -1,12 +1,11 @@
+import { AppRoutes } from 'Routes';
+import Cookies from 'js-cookie';
 import './App.css';
-import EntryForm from './components/EntryForm/EntryForm';
-import MainPage from './MainPage/MainPage';
 
 function App() {
-  return (
-    // <EntryForm />
-    <MainPage />
-  );
+  // const isAllowed = Boolean(Cookies.get('token'));
+  const isAllowed = true
+  return <AppRoutes isAllowed={isAllowed} />;
 }
 
 export default App;

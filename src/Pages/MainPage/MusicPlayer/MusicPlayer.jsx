@@ -1,11 +1,12 @@
 import * as styled from './MusicPlayerStyled';
 import MusicPlayer__ProgressBar from './MusicPlayerProgressBar/MusicPlayerProgressBar';
 import MusicPlayer__Interface from './MusicPlayerInterface/MusicPlayerInterface';
-const MusicPlayer = () => {
+
+const MusicPlayer = ({ currentTrack, invisible }) => {
   return (
-    <styled.musicPlayer>
+    <styled.musicPlayer $invisible={invisible}>
       <MusicPlayer__ProgressBar />
-      <MusicPlayer__Interface />
+      <MusicPlayer__Interface currentTrack={currentTrack} />
     </styled.musicPlayer>
   );
 };

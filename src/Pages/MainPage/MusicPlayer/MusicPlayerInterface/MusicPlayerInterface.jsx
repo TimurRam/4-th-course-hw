@@ -4,12 +4,13 @@ import MusicPlayer__Track from '../MusicPlayerTrack/MusicPlayerTrack';
 import MusicPlayer__LikeDislike from '../MusicPlayerLikeDislike/MusicPlayerLikeDislike';
 import MusicPlayer__Volume from '../MusicPlayerVolume/MusicPlayerVolume';
 
-const MusicPlayerInterface = () => {
+const MusicPlayerInterface = ({ currentTrack }) => {
   return (
     <styled.playerInterface>
+
       <styled.leftBlock>
         <MusicPlayer__Controls />
-        <MusicPlayer__Track />
+        <MusicPlayer__Track currentTrack={currentTrack} />
         <MusicPlayer__LikeDislike />
       </styled.leftBlock>
       <MusicPlayer__Volume />

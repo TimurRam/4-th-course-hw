@@ -2,7 +2,7 @@ import * as styled from './TracksStyled';
 import Tracks__SearchFilter from './TracksSearchFilter/TracksSearchFilter';
 import Tracks__List from './TracksList/TracksList';
 
-const Tracks = ({ heading = 'Треки',tracksData }) => {
+const Tracks = ({ heading = 'Треки',tracksData, setCurrentTrack, setInvisible, loadingClass}) => {
 
 
   return (
@@ -10,7 +10,11 @@ const Tracks = ({ heading = 'Треки',tracksData }) => {
       <styled.heading>{heading}</styled.heading>
       
       <Tracks__SearchFilter />
-      <Tracks__List tracksData={tracksData}/>
+      <Tracks__List 
+      loadingClass={loadingClass}
+      setInvisible={setInvisible}
+      setCurrentTrack={setCurrentTrack}
+      tracksData={tracksData}/>
     </main>
   );
 };

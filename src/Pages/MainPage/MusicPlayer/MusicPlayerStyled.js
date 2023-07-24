@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 export const musicPlayer = styled.div`
   width: inherit;
-  display: flex;
+  display: ${({ $invisible }) => ($invisible ? 'flex' : 'none')};
   flex-direction: column;
   box-sizing: border-box;
   position: fixed;

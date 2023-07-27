@@ -1,12 +1,12 @@
 import * as styled from './MusicPlayerTrackStaled';
 import sprite from 'img/icon/sprite.svg';
 
-const MusicPlayerTrack = ({ currentTrack }) => {
-  console.log(currentTrack);
+const MusicPlayerTrack = ({ currentTrack, audioRef }) => {
+  
   return (
     <styled.playerTrack>
       
-      <audio className='player' controls src={currentTrack.track_file}/>
+      <audio className='player' ref={audioRef} controls src={currentTrack.track_file}/>
    
 
       <styled.trackLogo>

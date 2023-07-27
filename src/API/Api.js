@@ -1,0 +1,11 @@
+export async function getPlaylist() {
+  return fetch("https://painassasin.online/catalog/track/all/", {
+    method: "GET",
+  }).then((response) => {
+    if (response.status !== 200)
+      throw new Error("Не удалось загрузить плейлист, попробуйте позже");
+    return response.json();
+  });
+}
+
+

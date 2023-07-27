@@ -1,28 +1,30 @@
 import * as styled from './TracksListStyled';
 import Tracks__ListHead from '../TracksListHead/TracksListHead';
 import Tracks__Track from '../TracksTrack/TracksTrack';
-import { fakeState } from 'helpers/fakeState';
 import { useEffect, useState } from 'react';
 
-const TracksList = ({tracksData}) => {
-  // Вешает класс loading на три секунды, а затем убирает его
-  const [loadingClass, setLoadingClass] = useState('loading');
-  useEffect(() => {
-    setTimeout(setLoadingClass, 3000, '');
-  });
-
+const TracksList = ({
+  getError,
+  tracksData,
+  setCurrentTrack,
+  setInvisible,
+  loadingClass,
+}) => {
   const trackElements = tracksData.map((track) => (
     <Tracks__Track
+    getError={getError}
+      track={track}
+      setInvisible={setInvisible}
+      setCurrentTrack={setCurrentTrack}
       key={track.id}
-      logo={track.logo}
-      name={track.name}
-      author={track.author}
-      album={track.album}
-      duration={track.duration_in_seconds}
       loadingClass={loadingClass}
     />
   ));
-
+if(getError){
+  return(
+    <h1>{getError}</h1>
+  )
+}
   return (
     <styled.trackList>
       <Tracks__ListHead />

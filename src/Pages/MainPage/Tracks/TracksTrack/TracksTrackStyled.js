@@ -16,15 +16,6 @@ export const trackLogo = styled.div`
   position: relative;
 `;
 
-/* .trackLogo::before {
-  content: '';
-  position: absolute;
-  z-index: 10;
-  height: inherit;
-  width: 100%;
-  background-color: gray;
-  display: block;
-} */
 export const trackLogoSvg = styled.svg`
   height: 20px;
   width: 20px;

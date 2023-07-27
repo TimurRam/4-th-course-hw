@@ -1,9 +1,14 @@
 import * as styled from './MusicPlayerTrackStaled';
 import sprite from 'img/icon/sprite.svg';
 
-const MusicPlayerTrack = () => {
+const MusicPlayerTrack = ({ currentTrack }) => {
+  console.log(currentTrack);
   return (
     <styled.playerTrack>
+      
+      <audio className='player' controls src={currentTrack.track_file}/>
+   
+
       <styled.trackLogo>
         <styled.trackLogoSvg>
           <use xlinkHref={`${sprite}#icon-note`}></use>
@@ -11,13 +16,13 @@ const MusicPlayerTrack = () => {
       </styled.trackLogo>
       <div>
         <styled.text>
-          <a className="track-play__author-link" href="http://">
-            Ты та...
+          <a className="track-play__author-link" href={currentTrack.track_file}>
+            {currentTrack.author}
           </a>
         </styled.text>
         <styled.text>
-          <a className="track-play__album-link" href="http://">
-            Баста
+          <a className="track-play__album-link" href={currentTrack.track_file}>
+            {currentTrack.name}
           </a>
         </styled.text>
       </div>

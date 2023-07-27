@@ -5,10 +5,7 @@ import playlist02 from 'img/playlist02.png';
 import playlist03 from 'img/playlist03.png';
 import { Link } from 'react-router-dom';
 
-const Sidebar = ({loadingClass}) => {
- 
-console.log(loadingClass);
-
+const Sidebar = ({ loadingClass }) => {
   return (
     <styled.sideBar>
       <Link to="/playlist/0">

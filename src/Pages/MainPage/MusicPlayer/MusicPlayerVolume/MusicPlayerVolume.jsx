@@ -1,7 +1,15 @@
 import * as styled from './MusicPlayerVolumeStyled';
 import sprite from 'img/icon/sprite.svg';
+import { useState } from 'react';
+const MusicPlayer__Volume = ({ audioRef }) => {
+  const [volumeValue, setVolumeValue] = useState('1');
+  const handlerOnChangeVolume = (e) => {
+    setVolumeValue(e.target.value);
+    audioRef.volume = setVolumeValue(e.target.value);
+  };
 
-const MusicPlayer__Volume = () => {
+  if (audioRef) audioRef.current.volume = parseFloat(volumeValue);
+
   return (
     <styled.volumeBlock>
       <div>
@@ -10,7 +18,15 @@ const MusicPlayer__Volume = () => {
         </styled.iconSvg>
       </div>
       <div>
-        <input type="range" name="range" />
+        <input
+          onInput={(e) => handlerOnChangeVolume(e)}
+          type="range"
+          id="volume"
+          min="0"
+          max="1"
+          value={volumeValue}
+          step="0.01"
+        />
       </div>
     </styled.volumeBlock>
   );
